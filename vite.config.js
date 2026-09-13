@@ -5,6 +5,10 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 3000,
-    open: true
+    host: true // bind 0.0.0.0, not just localhost - required to reach it via a public/EC2 IP
+  },
+  preview: {
+    port: 3000,
+    host: true
   }
 });
